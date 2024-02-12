@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h1>Emmet Shortcuts</h1>
+        <p>
+            This section contains Emmet formulas and their expected outputs
+            so that all of the shortcuts and characters in emmet could be remembered
+            easily.
+        </p>
+    </section>
+
+    Emmet formula 1:
+    <section>
+        <code>
+    nav>ul>li*5>a
+    </code>
+    </section>
+    output:
+    <section>
+        <code>
+    <nav>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
+    </code>
+    </section>
+
+    Emmet formula 2
+    <section>
+        <code>
+    nav>ul>li*5>a[href=www.google.com]
+    </code>
+    </section>
+
+    output
+    <section>
+        <code>
+            <nav>
+                <ul>
+                    <li><a href="www.google.com"></a></li>
+                    <li><a href="www.google.com"></a></li>
+                    <li><a href="www.google.com"></a></li>
+                    <li><a href="www.google.com"></a></li>
+                    <li><a href="www.google.com"></a></li>
+                </ul>
+            </nav>
+        </code>
+    </section>
+
+    Emmet formula 3:
+    <section>
+    <code>
+    nav>ul>li*5>a[href=www.$.com]
+    </code>
+    </section>
+
+    output:
+    <section>
+        <code>
+            <nav>
+                <ul>
+                    <li><a href="www.1.com"></a></li>
+                    <li><a href="www.2.com"></a></li>
+                    <li><a href="www.3.com"></a></li>
+                    <li><a href="www.4.com"></a></li>
+                    <li><a href="www.5.com"></a></li>
+                </ul>
+            </nav>
+        </code>
+    </section>
+
+    Emmet formula 4:
+    <section>
+        <code>
+            nav>ul>li*5>a[href=www.$.com]{Click me}
+        </code>
+    </section>
+
+    output:
+    <section>
+        <code>
+            <nav>
+                <ul>
+                    <li><a href="www.1.com">Click me</a></li>
+                    <li><a href="www.2.com">Click me</a></li>
+                    <li><a href="www.3.com">Click me</a></li>
+                    <li><a href="www.4.com">Click me</a></li>
+                    <li><a href="www.5.com">Click me</a></li>
+                </ul>
+            </nav>
+        </code>
+    </section>
+
+    Emmet formula 5:
+    <section>
+        <code>
+            nav>ul>li*5>a[href=www.google.com]{$}
+        </code>
+    </section>
+    Output:
+    <section>
+        <code>
+            <nav>
+                <ul>
+                    <li><a href="www.google.com">1</a></li>
+                    <li><a href="www.google.com">2</a></li>
+                    <li><a href="www.google.com">3</a></li>
+                    <li><a href="www.google.com">4</a></li>
+                    <li><a href="www.google.com">5</a></li>
+                </ul>
+            </nav>
+        </code>
+    </section>
+
+    <h2>Summary</h2>
+    <p>
+        list of characters Emmet uses and their respective meanings:
+    <dl>
+        <dt>></dt>
+        <dd>This character is used to insert RHS element into LHS element so that LHS element wraps RHS element. It is
+            used to create nested structure of html elements. (All example formulas)</dd>
+        <dt>*</dt>
+        <dd>This character is used to multiply, i.e. duplicate, LHS element by number specified on RHS. (All example
+            formulas)</dd>
+        <dt>[]</dt>
+        <dd>These brackets are used to specify attribute for element present at it's left hand side. (Example formula 2
+            to 5)</dd>
+        <dt>{}</dt>
+        <dd>These brackets are used to specify contents of the html element present on it's LHS. (Example formula 4 & 5)
+        </dd>
+        <dt>$</dt>
+        <dd>This character is used to add a iterator in the emmet formula. (Example formula 5)</dd>
+    </dl>
+    </p>
+</body>
+
+</html>
