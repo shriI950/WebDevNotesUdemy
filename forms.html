@@ -30,6 +30,30 @@
             <label for="time">Enter time</label>
             <input type="time" id="time">
         </p>
+        <!-- 
+            button inside a form automatically submits the form no matter where it is placed.
+            by default a button will submit the form if it's inside the form. 
+        -->
+
+        <button>
+            Submit
+        </button>
+        <br>
+        <!-- 
+            This button below won't submit the form as it has type of button that means it's not able to submit the form because it's not of type submit 
+        -->
+        <button type="button">
+            This button won't submit the form
+        </button>
+        <br>
+        <!-- the button below will submit the form as it's type is submit -->
+        <button type="submit">
+            submit
+        </button>
+        <br>
+        <!-- we can also make a button using input element as shown below-->
+        <input type="button" value="submit">
+        
 
     </form>
 
