@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Checkboxes and Radio Buttons</title>
+</head>
+
+<body>
+    <form action="/birds">
+        <!--
+            always remember, "value" attribute in an "input" element has the value which will be sent as the value of, the value of name attribute.
+        -->
+        <input type="checkbox" name="agree_tos" id="agree" checked value="yes">
+        <label for="agree">I agree to everything above</label>
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <!-- 
+            so in this case if we select a radio button for small (t-shirt) size, then browser search bar will have size=s in it's query 
+        -->
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
