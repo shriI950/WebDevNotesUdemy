@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Range and Radio buttons</title>
+</head>
+
+<body>
+    <form action="/search">
+        <p>
+            <label for="spice">Choose the amount of spice you want(in percent): </label>
+            <input type="range" name="spice" step="0.1" id="spice" min="0" max="100" value="80">
+        </p>
+        <p>
+            <label for="feedback">Don't forget to include the feedback</label>
+            <textarea name="feedback" id="feedback" cols="40" rows="5" placeholder="Enter Your Valuable Feedback!"></textarea>
+        </p>
+        <button>
+            submit
+        </button>
+    </form>
+</body>
+
+</html>
