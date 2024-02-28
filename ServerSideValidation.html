@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Server side validation</title>
+</head>
+
+<body>
+    <h2>Server Side Validation - SSV</h2>
+    <form action="/dummy">
+        <p>
+        <label for="name">Enter first name: </label>
+        <input type="text" name="name" id="name" required placeholder="Enter First Name">
+        </p>
+        <p>
+        <label for="username">Enter Username: </label>
+        <input type="text" name="username" id="username" placeholder="Enter Username" minlength="5" maxlength="20" required>
+        </p>
+        <button>
+            submit
+        </button>
+    </form>
+    <!-- 
+        summary: -> server side validations can be added into input elements by using attributes such as
+                    "required", "minlength", "maxlength", "min" and "max".
+                 -> Other types of inputs like input with "type" attribute set to tel 
+                    (short for telephone) only lets you enter a telephone number.
+                 -> These types also include email, url etc.
+                 -> We can also speicify our own pattern to check using
+                    pattern attribute with it's value set to some 
+                    regular expression.
+
+
+    -->
+</body>
+
+</html>
