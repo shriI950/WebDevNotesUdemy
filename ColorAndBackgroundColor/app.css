@@ -1,6 +1,10 @@
+body {
+    background-color: rgb(255,253,226);
+}
+
 h2 {
-    color: indigo;
-    background-color: pink;
+    color: #b7ffff;
+    background-color: #fe8353;
 }
 
 button {
