@@ -1,0 +1,79 @@
+/* Universal selector */
+/* * {
+    color: black;
+    background-color: cyan;
+} */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+/* 
+comma can be used to select 
+multiple selectors at once 
+*/
+#signup {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+span {
+    color: #457b9d;
+}
+
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 20px;
+}
+
+h1,
+h2 {
+    color: #1d3557
+}
+
+/* Descendent selectors */
+
+.post a {
+    color: #457b9d;
+}
+
+footer a {
+    color: #e63946;
+}
+
+input + button {
+    color: rgb(1, 34, 106);
+    background-color: rgb(87, 241, 45);
+}
+ 
+h2 + button {
+    font-size: 20px;
+}
+/* 
+Note: This is an adjecent selector.
+This selector is used to select 
+elements which are adjecent to 
+elements on Left hand side of the 
+'+' combinator.
+*/
+
+footer > a {
+    color: color-mix(in srgb, rgb(3, 211, 3), gold)
+}
+/* 
+syntax: [ parent-element ] > [ child-element ] {
+    [ rule to be specified ]
+}
+Note: This is a direct descendent 
+selector using '>' combinator.
+This selector used in above rule, 
+selects right hand side elements 
+which are direct descendents of 
+left hand side elements.
+*/
