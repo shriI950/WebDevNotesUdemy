@@ -1,0 +1,207 @@
+/* Universal selector */
+/* * {
+    color: black;
+    background-color: cyan;
+} */
+
+body {
+    background-color: #f1faee;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #a8dadc;
+}
+
+/* 
+comma can be used to select 
+multiple selectors at once 
+*/
+#signup {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+span {
+    color: #0b2737;
+}
+
+.tag {
+    background-color: #255398;
+    color: #f1faee;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+h1,
+h2 {
+    color: #1d3557
+}
+
+/* Descendent selectors */
+
+.post a {
+    color: #0e2c3e;
+    text-decoration: none;
+}
+
+.post a:hover {
+    color: rgb(2, 225, 255);
+    text-decoration: underline;
+}
+
+footer a {
+    color: #e63946;
+}
+
+input+button {
+    color: rgb(1, 34, 106);
+    background-color: rgb(87, 241, 45);
+}
+
+h2+button {
+    font-size: 20px;
+}
+
+/* 
+Adjecent selector
+Note: This is an adjecent selector.
+This selector is used to select 
+elements which are adjecent to 
+elements on Left hand side of the 
+'+' combinator.
+*/
+
+footer>a {
+    color: color-mix(in srgb, rgb(3, 211, 3), gold)
+}
+
+/* 
+direct child/descendent selector
+syntax: [ parent-element ] > [ child-element ] {
+    [ rule to be specified ]
+}
+Note: This is a direct descendent 
+selector using '>' combinator.
+This selector used in above rule, 
+selects right hand side elements 
+which are direct descendents of 
+left hand side elements.
+*/
+
+input[type="password"] {
+    color: #1d3557;
+}
+
+/* 
+Attribute selector
+Note: 
+-> Attribute selector is written
+   using square brackets [].
+-> After element name we specify
+   particular attribute to select
+   in these square brackets.
+-> Hence this selector only selects
+   elements having specified
+   attribute and specified value
+   for that attribute.
+-> Another example is as below...
+*/
+
+section[class="post"] {
+    background-color: #427696;
+}
+
+.post span+h2 {
+    color: color-mix(in srgb, #90d4ff, white);
+}
+
+/* 
+-> some other types of attribute
+   selector matching.
+1. element[attribute *= value] {statements}
+    - Is used to select element with attribute 
+      containing the value.
+2. element[attribute $= value] {statements}
+    - "$=" Is used to select element with 
+      attribute whose value ends
+      with the specified characters
+      in "value".
+3. element[attribue ~= value] {statements}
+    - "~=" is used to select an element
+      whose attribute contains the 
+      specified characters in given 
+      "value".
+4. element[attribute ^= value] {statements}
+    - "^=" is used to select an element
+      whose attribute value begins
+      with specified "value".
+5. element[attribute = value i]
+    - "i" (or "I") in the back of the
+      rule specifies that "value" for 
+      attribute specified should 
+      match the value of attribute
+      in HTML without considering
+      it's case.
+      Note: i for case "Insensitive"
+6. element[attribute = value s]
+    - "s" (or "S") in the back of the
+      rule specifies that "value" for
+      attribute specified in rule
+      should match the value of attribute
+      in HTML considering it's case.
+      i.e. "casE" is not same as "case"
+      Note: s for case "sensitive"
+*/
+
+/* 
+   Example of 1st type of selector
+   matching is as follows...
+*/
+a[href *="google"] {
+    color: magenta;
+}
+
+.post button:hover {
+    background-color: red;
+}
+
+.tag:hover {
+    background-color: #c52a37;
+    color: rgb(216, 190, 190)
+}
+
+#login:active {
+    background-color: rgb(204, 255, 115);
+}
+
+/* 
+::first-letter and ::first-line are called
+psuedo elements. Just like psuedo classes 
+these psuedo elements are used to style webpage
+but they are more dynamic than other elements.
+*/
+
+p::first-letter {
+    font-size: 35px;
+    color: rgb(227, 0, 0);
+}
+
+p::first-line {
+    font-weight: 700;
+    color: currentColor !important
+}
+/* 
+    "!important" is used to specify that 
+    the style used is of atmost importance and 
+    should not be overloaded by any other style.
+*/
+
+p::first-line {
+    color: red; /* this style won't be applied
+                     as it is overloaded by 
+                     important keyword in previous
+                     selector */
+}
