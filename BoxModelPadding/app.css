@@ -1,0 +1,46 @@
+div {
+    width: 500px;
+    height: 100px;
+}
+
+h1 {
+    width: 100px;
+    background-color: pink;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+/* border-color, border-thickness and border-style are all related to border property*/
+
+#one {
+    background-color: darksalmon;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box;
+    /* box-sizing helps to style the width and height of an element including borders of the element */
+}
+
+#two {
+    background-color: pink;
+    border-color: antiquewhite;
+    border-width: 3px;
+    border-style: dashed;
+    border-left-width: 8px;
+    padding-right: 50px;
+}
+
+#three {
+    background-color: darkgray;
+    border: 6px solid black;
+    border-left-style: dotted;
+    border-radius: 20rem;
+}
+
+button {
+    padding: 10px 20px 30px 40px;
+}
+
+/* 
+Padding is the space between the element's content block and border.
+*/
