@@ -37,3 +37,10 @@ span {
 span.InlineBlock {
     display: inline-block;
 }
+
+/* 
+We can also hide elements using 
+display: hidden; 
+This can be useful for not showing specific elments on a webpage without deleting them.
+This comes in handy while using javascript to program certain elements.
+*/
