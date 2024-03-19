@@ -1,0 +1,21 @@
+section {
+    background-color: #6d6875;
+    width: 800px;
+    height: 800px;
+    /* pixels are absolute
+                      units. */
+}
+
+div {
+    background-color: #e5989b;
+    width: 50%;
+    height: 50%;
+    /* percentages are not absolute they are relative to some other element or themselves.
+    In this example percentages specified as height and width are relative to parent element. i.e. height is set to be 50% of the height of parent section element. */
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+}
