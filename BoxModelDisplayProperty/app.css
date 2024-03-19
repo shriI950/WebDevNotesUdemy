@@ -1,0 +1,39 @@
+h1 {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    /* by default h1 is block elemenet but if we want to make it inline element we can */
+    display: inline;
+    /* This line makes it an
+                        inline element
+                     */
+}
+
+span.IAmBlock {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    /* By default, span is an inline element but if we want to make it block element we can... */
+    display: block;
+    /* Above like makes span a block element 
+    i.e. it converts span element from inline to block. */
+}
+
+span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    width: 200px;
+    padding: 50px;
+    margin: 50px;
+}
+
+/*
+    We can observe that block level elements are respected when it comes to display width height and other properties like padding and margin.
+
+    But on other the hand, inline elements are not respected and some of the properties like height and width are ignored while displaying, even it they are explicitly specified.
+
+    In case of block-inline elements, all specified properties are respected yet elements do not push eachother on a seperate line. E.g. look at the following rule for inline-block.
+    Inline block elements work as block elements but they do not occupy the whole row they just occupy enough space to respect all declred properties.
+*/
+
+span.InlineBlock {
+    display: inline-block;
+}
