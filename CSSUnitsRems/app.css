@@ -1,0 +1,70 @@
+section {
+    background-color: #6d6875;
+    width: 800px;
+    height: 800px;
+    /* pixels are absolute
+                      units. */
+}
+
+div {
+    background-color: #e5989b;
+    width: 50%;
+    height: 50%;
+    /* percentages are not absolute they are relative to some other element or themselves.
+    In this example percentages specified as height and width are relative to parent element. i.e. height is set to be 50% of the height of parent section element. */
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+}
+
+h2 {
+    font-size: 2em;
+    margin-left: 1em;
+    /* For margin, 1em refers to font-size in pixels of that element itself i.e. in this example font-size of this h2 is 2em i.e. 2 * 30 px as 30 is the inherited font size from article element which is parent element. */
+}
+
+p {
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 1.5em;
+    /* 
+    Em's are used for deciding font size according to their parent elements E.g. if some element has a font-size set to 2em then that means it's font-size is double than that of it's parent.
+    By default font-size of any text inside body element is 16px so 2em would mean font-size of 32px.
+    In this example it's set to 1.5em so font-size will be (1.5*16)px. As article is the parent element of this h3 and article is also a child of body so it inherits it's default font-size from body element which is in tern 16px hence same 16px is also inherited bydefault by h3.
+    If we change the font-size for article element then, font-size for h3 will also change as it's depedent on font-size of parent element in this case article.
+    */
+}
+
+article {
+    font-size: 20px;
+}
+
+button {
+    font-size: 1em;
+    padding: 0px 1em;
+    border-radius: .5em;
+    background-color: rgb(91, 193, 159);
+    color: white;
+    /* this button scales differently based on in which element it's placed.
+    In our current website, we have placed this button in h1, in section and in body and all buttons have different font-sizes as font-size of a button depends upon font-size of the element containing it. 
+    So if body contains the button, button will calculate it's font-size based on font-size inheritied from the body. */
+}
+
+ul {
+    font-size: 2em;
+    /* thing with ems is they stack upon one another and hence they cause unintended effects like these where each ul nested inside other ul has double the font-size than their parent ul's.
+    To solve this problem we have Rem's.
+    Rem stand for Root Ems.
+    Rems derive their initial font-size(default font-size) from the root HTML element.
+    So if root HTML element has a font-size of say 10px then 1rem will also be 10px.
+    If default font-size of HTML root is 20px then 1rem will be equal to 20px, and 0.5rem will now equal 10px.
+    So the difference is Em's derive their default font-size from their parent elements whereas Rem's derive their font-size from HTML root element.
+    Hence following line will fix the problem.
+    Note: To see the problem with Em's comment below line. */
+    font-size: 2rem;
+}
