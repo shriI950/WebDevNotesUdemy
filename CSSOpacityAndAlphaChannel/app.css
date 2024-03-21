@@ -1,0 +1,27 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* If you see on a webpage, the text inside of the section element does not change much, it's transparancy does not change with background color.
+    i.e. Element's transparancy is limited to it's background color, It does not apply to entire element. */
+    /* While representing alpha channel with hex values we use additional two digits at the end of that hex value to specify it's alpha channel value.
+    These last two digits, like all other hex digits, range from 00 to FF.
+    00 for no transparancy and FF for full transparancy. */
+    background-color: #34546686;
+    /* last two digits of above rule i.e. 86 define transparancy of div's background color. */
+}
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.5;
+    /* Opacity impacts the whole element, unlike alpha channel which is limited to background-color and does not affect other contents in that element.
+    But Opacity is an indepedent property of an element and hence affects every other element which is nested inside that element, let it be just text or any other element like button or divs. */
+}
