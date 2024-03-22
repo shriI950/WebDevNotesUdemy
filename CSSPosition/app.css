@@ -1,0 +1,65 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 3px solid black;
+    display: inline-block;
+    margin: 10px;
+}
+
+#middle {
+    background-color: aquamarine;
+}
+
+#static #middle {
+    position: static;
+    top: 100px;
+    /* If position is static, properties like top, bottom, left and right have no effect.
+    By default all elements are positioned as static. */
+}
+
+#relative #middle {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    /* 
+    Relative position let's you to position elements on page based on their current position on the page.
+    */
+}
+
+#absolute {
+    position: relative;
+}
+
+#absolute #middle {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* absolute is the most confusing of all it place the element relative to it's positioned nearest ancestor. i.e. if it's direct parent is positioned(as in parent's position is not static, which is the default value) then the element with position of absolute is positioned relative to it's parent.
+    If it's parent is statically positioned then element with absolute position is positioned relative to the body element which is the root element. */
+}
+
+#fixed #middle {
+    position: fixed;
+    top: 0;
+    left: 400px;
+    /* in case of fixed positioning, a block with fixed position remains in that position which is specified relative to actual document frame.
+    If we scroll the block also moves always maintaining that position with page's top and left corner.
+    so if block is placed with top as 10px and left as 400px then that means block will remain at (400px, 10px) from page's top left corner. (0px, 0px) is the page's top left corner and it changes as we scroll so page's top left corner i.e. origin, from which element is positioned, changes as we scroll.
+    And with that changing origin, position of fixed positioned element also changes.
+    */
+}
+
+#sticky {
+    position: relative;
+}
+
+#sticky #middle {
+    position: sticky;
+    top: 100px;
+    left: 100px;
+    /* Sticky positioning let's you position an element relative to it's parent element in such a way that, it sticks to it's parent element when scrolled till the end of parent element.
+    After parent element ends it does not stick around on the page anymore.
+    top, bottom, left, right properties dectate element's position when it gets scrolled if it is not in scrolled condition then it remains on the page as it is without any offset. 
+    At this point in time i am unsure of it's full working. */
+}
