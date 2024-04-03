@@ -1,0 +1,31 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 140px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    /* 
+    Flex direction is the property which determines how text or elements are aligned on the page. There are two main directions on the page row and column. Row is the direction from left to right of the page whereas column is the direction from top to bottom of the page.
+    Hence naturally, row-reverse and column-reverse are reverse of row and column.
+    */
+    justify-content: space-evenly;
+    /* Justify content is the property which determines where elements are placed, according to main axis, they can be either placed at the start of the axis(main axis) or at the end by specifying values flex-start and flex-end respectively.
+    Or elements can be placed such that there is even space between two elements and an element and a border using value space-evenly; Or they can be spaced with equal spacing in between them but not between the elements and the container, elements and the container will touch eacheother, this can be done using value space-between; Or elements can be spaced in such a way that there is even amount of space between two elements but not between a container and an element. */
+    flex-wrap: wrap;
+    /* Flex wrap let's you wrap the elements instead of squashing it. This means if element is squashing against the container that element will be given new position in next column or a next row as per flex-direction. If flex-direction has value of row then this item will be given position in next row or if flex-direction is set to column then this item will be given position in the next column. */
+}
+
+#container div {
+    width: 400px;
+    height: 50px;
+}
