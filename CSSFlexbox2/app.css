@@ -1,0 +1,47 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    /*See Flexbox*/
+    justify-content: center;
+    /*See Flexbox*/
+    flex-wrap: wrap;
+    /*See Flexbox*/
+    align-items: center;
+    /* This property is used to align items with respect to cross axis, whichever axis it might be horizontal or vertical.
+    align-items can take values such as flex-start, flex-end, baseline, first baseline, last baseline, center etc.
+    This property only works if flex-wrap is set to wrap which is bydefault set to streach.
+    baseline value works if elements have text in them, when align-items is set to baseline, elements are aligned to eachother using baseline i.e. line at the base of the text in all the elements. */
+
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 4em;
+}
+
+#first {
+    align-self: flex-start;
+}
+
+#container div:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+#container div:nth-of-type(4) {
+    align-self: flex-start;
+}
